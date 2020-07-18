@@ -43,7 +43,7 @@ class Facebook extends AbstractProvider
      * @const string
      */
     const GRAPH_API_VERSION_REGEX = '~^v\d+\.\d+$~';
-    
+
     /**
      * The Graph API version to use for requests.
      *
@@ -67,7 +67,7 @@ class Facebook extends AbstractProvider
     public function __construct($options = [], array $collaborators = [])
     {
         parent::__construct($options, $collaborators);
-
+ 
         if (empty($options['graphApiVersion'])) {
             $message = 'The "graphApiVersion" option not set. Please set a default Graph API version.';
             throw new \InvalidArgumentException($message);
